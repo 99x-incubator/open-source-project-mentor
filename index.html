@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Portal</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script>
+      /*function mentorOpen(){
+    window.open("mentor.html");
+}
+function contributorOpen(){
+    window.open("contributor.html");
+}
+ */
+    </script>
+    <div class="D2">
+      <img
+        src="resources/download.jpg."
+        alt="Logo"
+        width="209"
+        height="156"
+        class="imgL"
+        align="left"
+      />
+      <h1>
+        <center>
+          <h1 class="H1">Open source project mentor</h1>
+        </center>
+      </h1>
+    </div>
+    <br />
+    <hr align="center" size="10" class="hr" />
+    <br />
+    <br />
+    <p><center>Welcome to the open source mentor-contributor portal</center></p>
+    <div class="D1">
+      <form action="signin.php" method="post" id="frm3">
+        <table width="351" height="145">
+          <tbody>
+            <tr>
+              <td><h3>Please enter user type :</h3></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <input
+        class="btn-class"
+        type="button"
+        name="mentor"
+        id="mentor"
+        value="mentor"
+        onClick="mentorOpen()"
+      />
+      <input
+        class="btn-class"
+        type="button"
+        name="contributor"
+        id="contributor"
+        value="contributor"
+        onClick="contributorOpen()"
+      />
+    </div>
+  </body>
+</html>
