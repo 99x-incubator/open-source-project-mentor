@@ -19,7 +19,7 @@ const IssueSchema = new mongoose.Schema({
     type: String,
   },
 
-  createdData: {
+  createdDate: {
     type: Date,
     default: Date.now,
   },
