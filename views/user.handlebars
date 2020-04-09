@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <center>
+        <h1>Issues</h1>
+        <table class="table">
+            <tr>
+                <th>issue Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>assigned</th>
+            </tr>
+            <tbody>
+                {{#each result}}
+                <tr>
+                    <td>{{{this.issue_id}}}</td>
+                    <td>{{{this.issue_title}}}</td>
+                    <td>{{{this.issue_description}}}</td>
+                    <td>{{{this.assigned}}}</td>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </center>
+</body>
+
+</html>
