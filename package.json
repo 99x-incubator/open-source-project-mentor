@@ -2,7 +2,7 @@
   "name": "open-source-project-mentor",
   "version": "1.0.0",
   "description": "A portal to monitor and track progress of open-source projects",
-  "main": "index.js",
+  "main": "./server/app.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
