@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- sample comment
+  -->
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <h1>Search for issues</h1>
+
+  <!-- links or URLs are always GET resources as they are getting (retrieving) a resource -->
+  <a href="/page1">Login page</a>
+  <a href="/page2">Insert issue</a>
+  <a href="/page4">Assign issue</a>
+
+  <form action="findIssue" method="GET">
+    <label for="name">issue_id to search for:</label>
+    <input type="text" name="name" value="">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+</html>
