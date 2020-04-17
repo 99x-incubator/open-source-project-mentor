@@ -1,17 +1,45 @@
 // import libraries
-// path is a built-in node library to handle file system paths
 const path = require("path");
-// express is a popular Model-View-Controller framework for Node
 const express = require("express");
-// library to handle POST requests any information sent in an HTTP body
+//to handle POST requests
 const bodyParser = require("body-parser");
-// Mongoose is one of the most popular MongoDB libraries for node
+// Mongoose is for MongoDB in node
 const mongoose = require("mongoose");
-// express handlebars is an express plugin for handlebars templating
+// Used handlebars templating for ease
 const expressHandlebars = require("express-handlebars");
 
-// import our router.js file to handle 
-you have 'routes' that line up URLs to controller methods
+// import our router.js file to handle
 const router = require("./router.js");
 
-//TO COMPLETE AFTER MONGO setup
+const app = express();
+const port = process.env.PORT || process.env.NODE_PORT || 3000;
+
+// parse form POST requests as application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.json());
+
+app.engine(
+  "handlebars",
+  expressHandlebars({
+    defaultLayout: "",
+  })
+);
+app.set("view engine", "handlebars");
+// set the views path
+app.set("views", `${__dirname}/../views`); //views have to be setup using handlebars
+mongoose
+  .connect("mongodb://localhost:27017/mentor_issue", { useNewUrlParser: true }) //testdb is temp
+  .catch((error) => handleError(error));
+
+// pass our app to our router object to map the routes
+router(app);
+// Tell the app to listen on the specified port
+app.listen(port, (err) => {
+  // if the app fails, throw the err
+  if (err) {
+    throw err;
+  }
+  console.log(`Listening on port ${port}`);
+  //console.log(__dirname);
+});
