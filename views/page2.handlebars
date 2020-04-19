@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- passed in variables in handlebars are surrounded by two curly braces like the following
+       Any variable you pass into res.render will be available by name in the template through
+       the curly braces
+  -->
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <h1>Welcome to page 2</h1>
+
+  <a href="/page1">Login page</a>
+  <a href="/page3">Search Issue</a>
+  <a href="/page4">Assign issue</a>
+
+  <form action="/setIssue" method="POST">
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" value="">
+    <label for="issue_id">Issue: </label>
+    <input type="number" name="issue_id" value="">
+    <label for="Description">Description:</label>
+    <input type="text" name="Description" value="">
+    <label for="CreatedDate">created Date:</label>
+    <input type="text" name="CreatedDate" value="">
+    <input type="submit" value="submit">
+  </form>
+
+  <br />
+  <br />
+</body>
+
+</html>
